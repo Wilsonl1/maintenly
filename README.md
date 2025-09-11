@@ -18,8 +18,8 @@ A full-stack vehicle maintenance application built with React, TypeScript, Vite,
 | Bootstrap    | REST API      |          | Postman    |
 
 ### Backend Setup (Node.js + MongoDB + Express + Cors = .Env)
+![Installed Dependencies](images/DependencyInstall.png)
 - Installed dependencies .env, Node.js, Express, mongoose, and cors
- ![Installed Dependencies](images/DependencyInstall.png)
 
 - connected to the mongoDB through the Mongo_URI 
 
