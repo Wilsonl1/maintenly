@@ -17,8 +17,8 @@ A full-stack vehicle maintenance application built with React, TypeScript, Vite,
 | TypeScript,  | Express       |          | code       |
 | Bootstrap    | REST API      |          | Postman    |
 
-### Backend Setup (Node.js + MongoDB + Express + Cors = .Env)
-![Installed Dependencies](images/DependencyInstall.png)
+## Backend Setup (Node.js + MongoDB + Express + Cors = .Env)
+![Installed Dependencies](/images/ReadMeFile/Backend/DependencyInstall.png)
 - Installed dependencies .env, Node.js, Express, mongoose, and cors
 
 - connected to the mongoDB through the Mongo_URI 
@@ -30,7 +30,7 @@ A full-stack vehicle maintenance application built with React, TypeScript, Vite,
 -Tested all endpoints in postman and verified data was being stored and changed in MongoDB.
 
 
-### Frontend Setup (React + vite + TypeScript + BootStrap)
+## Frontend Setup (React + vite + TypeScript + BootStrap)
 ```bash
 # clone the repo
 git clone https://github.com/wilsonl1/maintenly.git
