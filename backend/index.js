@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 // Vehicles route 
-app.use("/", vehiclesRouter);
+ app.use("/vehicles", vehiclesRouter);
 
 // Users route
 app.use("/users", usersRouter);

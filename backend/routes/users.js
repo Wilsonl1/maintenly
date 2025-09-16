@@ -6,30 +6,8 @@ const bcrypt = require("bcrypt");
 
 
 // We will not get all users because that is for the owner of the app to do, not the users of the app? 
-
-//Create vehicle for a specific user
-router.post("/:userId/vehicles", async (req, res) => {
-    try{
-        //make sure user exists first
-        const user = await User.findById(userId);
-        if (!user) return res.status(404).json({message:"User not found"});
-
-        const vehicle = new vehicle({
-            year: req.body.year,
-            make: req.body.make,
-            model: req.body.model,
-            user: req.body.userId,
-        });
-
-        const newVehicle = await vehicle.save();
-        res.status(201).json(newVehicle);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: "vehicle not added.", error: err.message });
-    }
-});
-
-//Create a new user
+//Create a new user 
+//This works
 router.post("/", async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -48,6 +26,7 @@ router.post("/", async (req, res) => {
 
 // Get all users
 // I migh comment this out becasue I need to add authentication and authorization to this app.
+// This works
 router.get("/", async (req, res) => {
     try { const users = await User.find();
         res.json(users);
@@ -56,7 +35,8 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Get user by ID
+// Get 1 user by ID
+// This works
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
@@ -68,6 +48,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //update existing user
+// This works
 router.put("/:id", async (req, res) => {
     try {
     const updateUser = await User.findByIdAndUpdate (
@@ -82,6 +63,7 @@ router.put("/:id", async (req, res) => {
 
 
 //Delete existing user
+// this works 
 router.delete("/:id", async(req, res) => {
     try {
         await User.findByIdAndDelete(req.params.id);
