@@ -36,11 +36,11 @@ router.get("/:userId/vehicles", async (req, res) => {
     res.json(vehicles);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Could not get  users vehicles", error: err.message });
+    res.status(500).json({ message: "Could not get users vehicles", error: err.message });
   }
 });
 
-// Get 1 vehicle by vehicle id and show the user it belongs to. 
+// Get 1 vehicle by vehicle_id and show the user it belongs to. 
 //This works
 router.get("/:id", async (req, res) => {
   try {
@@ -54,7 +54,8 @@ router.get("/:id", async (req, res) => {
 });
 
 
-// Update a vehicle // This works too but you have to use the vehicle id not the users
+// Update a vehicle 
+// This works 
 router.put("/:id", async (req, res) => {
   try {
     const updatedVehicle = await Vehicle.findByIdAndUpdate(

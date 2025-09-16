@@ -4,7 +4,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 const vehiclesRouter = require("./routes/vehicles");
-const usersRouter = require("./routes/users",)
+const usersRouter = require("./routes/users");
+const servicesRouter = require("./routes/services");
 
 const app = express();
 app.use(cors());
@@ -20,6 +21,9 @@ app.get("/", (req, res) => {
 
 // Users route
 app.use("/users", usersRouter);
+
+// Services route
+app.use("/services", servicesRouter);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
